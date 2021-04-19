@@ -1,7 +1,7 @@
 public class Person implements Comparable<Person> {
-   private final String name;
-   private final String surname;
-   private final Integer age;
+   public final String name;
+   public final String surname;
+   public final Integer age;
 
    public Person(String name, String surname, Integer age) {
        this.name = name;
@@ -9,16 +9,23 @@ public class Person implements Comparable<Person> {
        this.age = age;
    }
 
+    @Override
+    public int compareTo(Person p) {
+        if (this.surname.compareToIgnoreCase(p.surname) != 0)
+            return this.surname.compareToIgnoreCase(p.surname);
+        if (this.name.compareToIgnoreCase(p.name) != 0)
+            return this.name.compareToIgnoreCase(p.name);
+        if (this.age != p.age)
+            return this.age - p.age;
+
+        return 0;
+    }
+
    public void print() {
-       String message = this.name;
-       if (this.surname.compareTo(this.name) != 0)
-           message += " " + this.surname;
-       message += " is " + this.age + " years old.";
-       System.out.println(message);
+       System.out.println(this.name + " is " + this.age + " years old.");
    }
 
-    @Override
-    public int compareTo(Person o) {
-        return 0;
+    public String getFullname() {
+       return this.name + " " + this.surname;
     }
 }
