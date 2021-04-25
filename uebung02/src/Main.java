@@ -20,7 +20,9 @@ public class Main {
         manager.addCountry("Testland");
     }
 
-    public static void aufgabe2() {}
+    public static void aufgabe2() {
+        #test
+    }
 
     public static void aufgabe3() {}
 
