@@ -9,7 +9,7 @@ public class Main {
         // aufgabe1();
         // aufgabe2();
         // aufgabe3();
-        // aufgabe4();
+        aufgabe4();
         // aufgabe5();
     }
 
@@ -24,7 +24,12 @@ public class Main {
 
     public static void aufgabe3() {}
 
-    public static void aufgabe4() {}
+    public static void aufgabe4() {
+        String testPhrase = "Das ist in der Remigiusstraße 13, 53111 Bonn";
+        System.out.println(Parser.parseStreet(testPhrase));
+        testPhrase = "500g Mehl 123,2 ml Milch";
+        System.out.println(Parser.extractNumberFromStr(testPhrase));
+    }
 
     public static void aufgabe5() {}
 }
