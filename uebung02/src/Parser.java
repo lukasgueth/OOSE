@@ -14,4 +14,9 @@ public final class Parser {
         System.out.println("Passed string doesn't contain two digits.");
         return (float) -1.0;
     }
+
+    public static boolean isValidPhonenumber(String phonenumber) {
+        String regex = "(\\+49|0049)?[ -]?[\\d]{4,5}[ -]?[\\d ]+";
+        return phonenumber.replaceAll(" ", "").matches(regex);
+    }
 }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // aufgabe1();
-         aufgabe2();
+        // aufgabe2();
         // aufgabe3();
         // aufgabe4();
         // aufgabe5();
@@ -47,6 +47,8 @@ public class Main {
         System.out.println(Parser.parseStreet(testPhrase));
         testPhrase = "500g Mehl 123,2 ml Milch";
         System.out.println(Parser.extractNumberFromStr(testPhrase));
+        String testPhonenumber = "+49 0228-234235";
+        System.out.println(Parser.isValidPhonenumber(testPhonenumber));
     }
 
     public static void aufgabe5() {}
