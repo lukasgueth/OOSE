@@ -28,11 +28,14 @@ public class Main {
         * Klassen Aufwand sparen */
 
         // Aufgabe 2.b:
-        new Thread(() -> {
-            int counter = 0;
-            while (counter <= 100) {
-                System.out.println(counter);
-                counter ++;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int counter = 0;
+                while (counter <= 100) {
+                    System.out.println(counter);
+                    counter ++;
+                }
             }
         }).start();
     }
