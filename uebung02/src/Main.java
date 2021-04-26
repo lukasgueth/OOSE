@@ -51,5 +51,15 @@ public class Main {
         System.out.println(Parser.isValidPhonenumber(testPhonenumber));
     }
 
-    public static void aufgabe5() {}
+    public static void aufgabe5() {
+        /*
+        a)
+            void  eat (){} an gegebener Stelle würde, weil Hamburger von Fastfood erbt, die Methode eat ohne Probleme überschreiben
+        b)
+            void eat() throws Exception {} kann nicht kompilieren, da die Überschriebene Methode eat in Fastfood  eine Subklasse von Exception schmeißt.
+            Sub-exceptions in der erbenden Klasse zu generalisieren ist nicht möglich.
+        c)
+            void eat(int y) throws Exception {} kann kompilieren, da keine Methode überschrieben wird aus Fastfood, eat() und eat(int y) coexistieren sozusagen in Hamburger, ohne Probleme
+         */
+    }
 }
