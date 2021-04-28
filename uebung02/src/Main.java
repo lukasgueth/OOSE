@@ -103,10 +103,12 @@ public class Main {
         Collections.sort(persons, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
+                int nameComparison = 0;
                 int surnameComparison = o1.surname.compareToIgnoreCase(o2.surname);
                 if (surnameComparison != 0)
                     return surnameComparison;
-                int nameComparison = Character.toString(o1.name.charAt(2)).compareToIgnoreCase(Character.toString(o2.name.charAt(2)));
+                if (o1.name.length() >= 3 && o2.name.length() >= 3)
+                    nameComparison = Character.toString(o1.name.charAt(2)).compareToIgnoreCase(Character.toString(o2.name.charAt(2)));
                 return nameComparison;
             }
         });
