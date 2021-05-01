@@ -9,15 +9,15 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("\n===== Aufgabe 1 =====");
-        aufgabe1();
+        // aufgabe1();
         System.out.println("==========\n");
 
         System.out.println("\n===== Aufgabe 2 =====");
-        aufgabe2();
+        // aufgabe2();
         System.out.println("==========");
 
         System.out.println("\n===== Aufgabe 3 =====");
-        aufgabe3();
+        // aufgabe3();
         System.out.println("==========");
 
         System.out.println("\n===== Aufgabe 4 =====");
